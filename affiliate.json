@@ -1,0 +1,25 @@
+{
+  "network": "LinkConnector",
+  "merchant": "DIY Apparel & Screen Printing",
+  "tracking_id": "benpalmarini6380",
+  "atid": "ScreenPrintingWeb",
+  "base_url": "https://www.linkconnector.com/ta.php",
+  "full_tracking_url": "https://www.linkconnector.com/ta.php?lc=007949155911007876&atid=ScreenPrintingWeb",
+  "campaign_details": {
+    "lc_value": "007949155911007876",
+    "promotion_type": "Beginner Kits & Supplies",
+    "target_niche": "Home-Based Custom Apparel"
+  },
+  "vulture_nodes": [
+    {
+      "node_id": "node_01_header",
+      "anchor_text": "Get Your Beginner Kit",
+      "link": "https://www.linkconnector.com/ta.php?lc=007949155911007876&atid=ScreenPrintingWeb"
+    },
+    {
+      "node_id": "node_02_guide",
+      "anchor_text": "Start Printing Now",
+      "link": "https://www.linkconnector.com/ta.php?lc=007949155911007876&atid=ScreenPrintingWeb"
+    }
+  ]
+}
