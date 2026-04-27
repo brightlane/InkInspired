@@ -1,0 +1,13 @@
+# VULTURE 10K PROTOCOL - InkInspired (2026)
+# Target: All Search Engines
+
+User-agent: *
+Allow: /
+
+# Direct spiders to the content map
+Sitemap: https://brightlane.github.io/InkInspired/sitemap.xml
+
+# Prevent crawling of administrative or temporary files
+Disallow: /node_modules/
+Disallow: /temp/
+Disallow: /.git/
