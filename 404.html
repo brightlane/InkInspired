@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Not Found | InkInspired Redirect</title>
+    <style>
+        :root { --ink-purple: #6c5ce7; --ink-dark: #2d3436; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--ink-dark); 
+            color: white; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0; 
+            text-align: center;
+        }
+        .container { border: 1px solid var(--ink-purple); padding: 50px; border-radius: 20px; }
+        h1 { font-size: 4rem; margin: 0; color: var(--ink-purple); }
+        p { font-size: 1.2rem; opacity: 0.8; }
+        .timer { font-family: monospace; color: var(--ink-purple); font-weight: bold; }
+        .btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 25px;
+            background: var(--ink-purple);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+    <meta http-equiv="refresh" content="5;url=https://brightlane.github.io/InkInspired/blog.html">
+</head>
+<body>
+
+    <div class="container">
+        <h1>404</h1>
+        <p>This creative node has migrated or is currently being encrypted.</p>
+        <p>Redirecting to the <strong>InkInspired Intelligence Vault</strong> in <span id="countdown" class="timer">5</span> seconds...</p>
+        
+        <a href="blog.html" class="btn">Return to Vault Now</a>
+    </div>
+
+    <script>
+        // Visual Countdown logic
+        let timeLeft = 5;
+        const downloadTimer = setInterval(function(){
+            if(timeLeft <= 0){
+                clearInterval(downloadTimer);
+            }
+            document.getElementById("countdown").innerHTML = timeLeft;
+            timeLeft -= 1;
+        }, 1000);
+
+        // Affiliate brain check - ensure tracking ID follows the user
+        const trackingID = "benpalmarini6380"; 
+        console.log("Vulture Protocol 404: Handing over to Node ID " + trackingID);
+    </script>
+</body>
+</html> 
