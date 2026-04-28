@@ -1,97 +1,131 @@
-import datetime
-import random
 import os
+import datetime
 
 BLOG_FILE = "blog.html"
+ARCHIVE_DIR = "blog"
 
-START_TAG = "<!-- VULTURE START -->"
-END_TAG = "<!-- VULTURE END -->"
-
-MAX_POSTS = 7
+INDEX_START = "<!-- VULTURE INDEX START -->"
+INDEX_END = "<!-- VULTURE INDEX END -->"
 
 
+# -----------------------------
+# DAILY CONTENT GENERATION
+# -----------------------------
 def generate_post():
     today = datetime.datetime.now().strftime("%B %d, %Y")
 
-    topics = [
-        "Ink Flow Optimization",
-        "Heat Cure Consistency",
-        "Fabric Bond Strength",
-        "Low Cost Scaling Systems",
-        "Print Quality Control Loops"
-    ]
-
-    niche = "DIY Custom Apparel Business"
-
     return f"""
 <div class="intel-node">
-<h3>{today} — {random.choice(topics)}</h3>
+
+<h2>Ink Optimization & Profit Strategy Update — {today}</h2>
 
 <p>
-The <strong>{niche}</strong> continues to grow as creators shift toward home-based production systems with higher profit control.
+Today's focus is improving ink adhesion consistency for home-based apparel businesses.
+Better curing control and fabric prep directly increases product durability and resale value.
 </p>
 
 <p>
-Small improvements in workflow efficiency, ink handling, and curing accuracy can significantly increase product quality and resale value.
-</p>
-
-<p>
-Operators who focus on consistency rather than speed tend to outperform in long-term customer retention.
+Small improvements in workflow efficiency can significantly increase margins for DIY custom apparel brands.
 </p>
 
 <a class="btn" href="https://www.linkconnector.com/ta.php?lc=007949155911007876&atid=VultureDaily" target="_blank">
-Upgrade Setup
+Beginner Kit Recommendation
 </a>
+
 </div>
 """
 
 
-def update_blog():
+# -----------------------------
+# ARCHIVE PAGE CREATION
+# -----------------------------
+def create_archive(date_str, content, prev_day, next_day):
+    if not os.path.exists(ARCHIVE_DIR):
+        os.makedirs(ARCHIVE_DIR)
+
+    prev_link = f"{prev_day}.html" if prev_day else "../blog.html"
+    next_link = f"{next_day}.html" if next_day else "../blog.html"
+
+    html = f"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Daily Intel {date_str}</title>
+
+<style>
+body {{ font-family: Arial; background:#f8f8f8; padding:20px; }}
+a {{ color:#e63946; }}
+.intel-node {{ background:#fff; padding:20px; border-radius:8px; }}
+</style>
+
+</head>
+
+<body>
+
+<a href="../blog.html">← Back to Hub</a>
+
+<h1>{date_str}</h1>
+
+{content}
+
+<br><br>
+
+<a href="{prev_link}">← Previous</a> |
+<a href="../blog.html">Hub</a> |
+<a href="{next_link}">Next →</a>
+
+</body>
+</html>
+"""
+
+    with open(f"{ARCHIVE_DIR}/{date_str}.html", "w", encoding="utf-8") as f:
+        f.write(html)
+
+
+# -----------------------------
+# HUB INDEX UPDATE
+# -----------------------------
+def update_hub_index(date_str):
     if not os.path.exists(BLOG_FILE):
         raise FileNotFoundError("blog.html not found")
 
     with open(BLOG_FILE, "r", encoding="utf-8") as f:
         content = f.read()
 
-    print("Content size:", len(content))
+    link_html = f'<p><a class="post-link" href="blog/{date_str}.html">Daily Intel {date_str}</a></p>'
 
-    # safety guard (prevents corruption like your 85MB issue)
-    if len(content) > 2_000_000:
-        raise ValueError("File too large — reset required")
-
-    start = content.find(START_TAG)
-    end = content.find(END_TAG)
+    start = content.find(INDEX_START)
+    end = content.find(INDEX_END)
 
     if start == -1 or end == -1:
-        raise ValueError("VULTURE markers missing")
-
-    old_block = content[start + len(START_TAG):end].strip()
-
-    # split safely into posts
-    posts = []
-    for part in old_block.split('<div class="intel-node">'):
-        if part.strip():
-            posts.append('<div class="intel-node">' + part)
-
-    # add new post
-    posts.insert(0, generate_post())
-
-    # keep last N posts only
-    posts = posts[:MAX_POSTS]
-
-    new_block = "\n".join(posts)
+        raise ValueError("Missing VULTURE INDEX markers in blog.html")
 
     updated = (
-        content[:start + len(START_TAG)] +
-        "\n" + new_block + "\n" +
+        content[:start + len(INDEX_START)] +
+        "\n" + link_html + "\n" +
         content[end:]
     )
 
     with open(BLOG_FILE, "w", encoding="utf-8") as f:
         f.write(updated)
 
-    print(f"Updated blog successfully. Posts: {len(posts)}")
+
+# -----------------------------
+# MAIN RUNNER
+# -----------------------------
+def run():
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+
+    content = generate_post()
+
+    prev_day = None
+    next_day = None
+
+    create_archive(today, content, prev_day, next_day)
+    update_hub_index(today)
+
+    print(f"[VULTURE ENGINE] Generated: {today}")
 
 
 if __name__ == "__main__":
-    update_blog()
+    run()
