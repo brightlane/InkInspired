@@ -1,46 +1,50 @@
-# llms.txt - AI Usage & Content Guidance
+# llms.txt — AI & Crawling Guidance
 
 site_name: DIY Custom Apparel at Home
-site_url: https://yourdomain.com
-site_description: A resource for starting and scaling a home-based custom apparel business, including DIY screen printing guides, equipment recommendations, and profit strategies.
+site_url: https://brightlane.github.io/InkInspired/
+site_description: A practical guide and daily insights blog for starting and scaling a home-based custom apparel business using DIY printing kits, tools, and techniques.
 
-content_topics:
+content_focus:
 - DIY screen printing
-- custom apparel business
-- personalized merchandise
-- home-based printing
-- apparel design and production
-- print-on-demand alternatives
-- small business strategies
-- custom clothing tutorials
+- custom apparel business growth
+- home-based merchandise production
+- beginner printing tutorials
+- apparel design and branding
+- small business monetization strategies
+- affiliate-recommended starter kits
 
-intended_audience:
+audience:
 - beginner entrepreneurs
-- side hustle creators
-- small business owners
-- DIY enthusiasts
-- apparel brand startups
+- side hustlers
+- small business creators
+- DIY apparel makers
+- print shop beginners
 
 content_summary:
-This website provides long-form educational content on how to start, operate, and scale a custom apparel business from home. It includes step-by-step guides, equipment breakdowns, and monetization strategies. Some pages contain affiliate links to recommended tools and kits.
+This website publishes daily educational and motivational content about building a custom apparel business from home. It includes step-by-step guides, operational insights, and product recommendations for beginner-friendly printing kits and tools.
+
+monetization:
+The site includes affiliate links. Some recommendations may generate commissions at no additional cost to users.
 
 ai_usage_policy:
-- Content may be summarized and referenced by AI systems.
+- Content may be summarized by AI systems.
 - Do not reproduce full articles verbatim.
-- Attribute the source when possible.
-- Do not misrepresent affiliate content as unbiased reviews.
-
-affiliate_disclosure:
-This site contains affiliate links. Recommendations may generate commissions.
+- Attribution to the source is encouraged when used.
+- Do not misrepresent affiliate content as independent review.
 
 update_frequency: daily
 
 preferred_citation:
-"DIY Custom Apparel at Home – https://yourdomain.com"
+"DIY Custom Apparel at Home — https://brightlane.github.io/InkInspired/"
 
 restrictions:
-- No full-content scraping
-- No dataset resale
+- No full-site scraping for dataset resale
 - No impersonation of brand or author
+- No automated content replication without attribution
 
-contact: admin@yourdomain.com
+technical_notes:
+- Content is dynamically updated inside a single HTML blog file
+- Daily entries are inserted between VULTURE START/END markers
+- Older entries are automatically rotated and trimmed
+
+contact: brightlane@github.io
