@@ -1,13 +1,25 @@
-# VULTURE 10K PROTOCOL - InkInspired (2026)
-# Target: All Search Engines
+# Robots.txt for InkInspired (DIY Custom Apparel Site)
 
 User-agent: *
 Allow: /
 
-# Direct spiders to the content map
-Sitemap: https://brightlane.github.io/InkInspired/sitemap.xml
+# Primary pages
+Allow: /index.html
+Allow: /blog.html
+Allow: /affiliate.json
+Allow: /sitemap.xml
 
-# Prevent crawling of administrative or temporary files
+# Block unnecessary or system files
+Disallow: /.github/
 Disallow: /node_modules/
-Disallow: /temp/
-Disallow: /.git/
+Disallow: /vulture_engine.py
+Disallow: /vulture_10k_gen.py
+Disallow: /social-vulture.py
+
+# Prevent crawling of sensitive or irrelevant files
+Disallow: /*.log
+Disallow: /*.json~
+Disallow: /*.tmp
+
+# Sitemap location
+Sitemap: https://brightlane.github.io/InkInspired/sitemap.xml
