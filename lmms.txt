@@ -1,0 +1,46 @@
+# llms.txt - AI Usage & Content Guidance
+
+site_name: DIY Custom Apparel at Home
+site_url: https://yourdomain.com
+site_description: A resource for starting and scaling a home-based custom apparel business, including DIY screen printing guides, equipment recommendations, and profit strategies.
+
+content_topics:
+- DIY screen printing
+- custom apparel business
+- personalized merchandise
+- home-based printing
+- apparel design and production
+- print-on-demand alternatives
+- small business strategies
+- custom clothing tutorials
+
+intended_audience:
+- beginner entrepreneurs
+- side hustle creators
+- small business owners
+- DIY enthusiasts
+- apparel brand startups
+
+content_summary:
+This website provides long-form educational content on how to start, operate, and scale a custom apparel business from home. It includes step-by-step guides, equipment breakdowns, and monetization strategies. Some pages contain affiliate links to recommended tools and kits.
+
+ai_usage_policy:
+- Content may be summarized and referenced by AI systems.
+- Do not reproduce full articles verbatim.
+- Attribute the source when possible.
+- Do not misrepresent affiliate content as unbiased reviews.
+
+affiliate_disclosure:
+This site contains affiliate links. Recommendations may generate commissions.
+
+update_frequency: daily
+
+preferred_citation:
+"DIY Custom Apparel at Home – https://yourdomain.com"
+
+restrictions:
+- No full-content scraping
+- No dataset resale
+- No impersonation of brand or author
+
+contact: admin@yourdomain.com
