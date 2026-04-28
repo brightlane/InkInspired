@@ -3,54 +3,44 @@ import random
 import os
 
 BLOG_FILE = "blog.html"
+
 START_TAG = "<!-- VULTURE START -->"
 END_TAG = "<!-- VULTURE END -->"
-MAX_POSTS = 7  # keep last 7 days
 
-NICHES = [
-    "Home-Based Screen Printing",
-    "Boutique Apparel Brands",
-    "Custom Merchandise Startups",
-    "DIY Clothing Lines"
-]
-
-TOPICS = [
-    "Ink Adhesion Optimization",
-    "Flash Cure Temperature Control",
-    "High-Margin Print Strategies",
-    "Fabric Compatibility Engineering",
-    "Low-Cost Production Scaling"
-]
+MAX_POSTS = 7
 
 
 def generate_post():
     today = datetime.datetime.now().strftime("%B %d, %Y")
-    niche = random.choice(NICHES)
-    topic = random.choice(TOPICS)
+
+    topics = [
+        "Ink Flow Optimization",
+        "Heat Cure Consistency",
+        "Fabric Bond Strength",
+        "Low Cost Scaling Systems",
+        "Print Quality Control Loops"
+    ]
+
+    niche = "DIY Custom Apparel Business"
 
     return f"""
 <div class="intel-node">
-<h3>{today} — {topic}</h3>
+<h3>{today} — {random.choice(topics)}</h3>
 
 <p>
-In the current custom apparel landscape, <strong>{niche}</strong> businesses are gaining a competitive edge by focusing on <strong>{topic.lower()}</strong>. 
-Operators who refine this process consistently outperform competitors in both quality and profit margins.
+The <strong>{niche}</strong> continues to grow as creators shift toward home-based production systems with higher profit control.
 </p>
 
 <p>
-The key advantage of DIY production is control. When you manage printing in-house, you eliminate outsourcing delays, reduce cost per unit, and unlock the ability to rapidly test new designs.
+Small improvements in workflow efficiency, ink handling, and curing accuracy can significantly increase product quality and resale value.
 </p>
 
 <p>
-Most beginners underestimate how quickly small optimizations compound. Adjusting ink flow, improving curing consistency, and selecting better garments can dramatically increase perceived value.
-</p>
-
-<p>
-At scale, these improvements translate directly into higher margins and repeat customers. This is why serious operators invest early in proper systems instead of treating printing as a hobby.
+Operators who focus on consistency rather than speed tend to outperform in long-term customer retention.
 </p>
 
 <a class="btn" href="https://www.linkconnector.com/ta.php?lc=007949155911007876&atid=VultureDaily" target="_blank">
-Upgrade Your Setup
+Upgrade Setup
 </a>
 </div>
 """
@@ -63,6 +53,9 @@ def update_blog():
     with open(BLOG_FILE, "r", encoding="utf-8") as f:
         content = f.read()
 
+    print("Content size:", len(content))
+
+    # safety guard (prevents corruption like your 85MB issue)
     if len(content) > 2_000_000:
         raise ValueError("File too large — reset required")
 
@@ -70,35 +63,34 @@ def update_blog():
     end = content.find(END_TAG)
 
     if start == -1 or end == -1:
-        raise ValueError("Markers not found")
+        raise ValueError("VULTURE markers missing")
 
-    existing_block = content[start + len(START_TAG):end].strip()
+    old_block = content[start + len(START_TAG):end].strip()
 
-    # Split existing posts
-    posts = [p for p in existing_block.split('<div class="intel-node">') if p.strip()]
+    # split safely into posts
+    posts = []
+    for part in old_block.split('<div class="intel-node">'):
+        if part.strip():
+            posts.append('<div class="intel-node">' + part)
 
-    # Rebuild posts cleanly
-    posts = ['<div class="intel-node">' + p for p in posts]
+    # add new post
+    posts.insert(0, generate_post())
 
-    # Add new post at top
-    new_post = generate_post()
-    posts.insert(0, new_post)
-
-    # Trim to max posts
+    # keep last N posts only
     posts = posts[:MAX_POSTS]
 
-    combined = "\n".join(posts)
+    new_block = "\n".join(posts)
 
-    updated_content = (
-        content[: start + len(START_TAG)] +
-        "\n" + combined + "\n" +
+    updated = (
+        content[:start + len(START_TAG)] +
+        "\n" + new_block + "\n" +
         content[end:]
     )
 
     with open(BLOG_FILE, "w", encoding="utf-8") as f:
-        f.write(updated_content)
+        f.write(updated)
 
-    print("Blog updated. Total posts:", len(posts))
+    print(f"Updated blog successfully. Posts: {len(posts)}")
 
 
 if __name__ == "__main__":
