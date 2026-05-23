@@ -1,0 +1,31 @@
+name: Daily Blog Post
+
+on:
+  schedule:
+    - cron: '0 9 * * *'   # Every day at 9 AM UTC — no cost, no API key
+  workflow_dispatch:        # Run manually anytime from GitHub Actions tab
+
+jobs:
+  post-blog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # Uses GitHub's FREE built-in token — nothing to set up
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run blog generator
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # ← FREE, auto-provided by GitHub
+          GH_USER: brightlane
+          GH_REPO: InkInspired
+        run: python blog_generator.py
