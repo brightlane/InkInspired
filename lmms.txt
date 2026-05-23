@@ -1,50 +1,30 @@
-# llms.txt — AI & Crawling Guidance
+# DIY Custom Apparel HQ
+# https://brightlane.github.io/InkInspired/
 
-site_name: DIY Custom Apparel at Home
-site_url: https://brightlane.github.io/InkInspired/
-site_description: A practical guide and daily insights blog for starting and scaling a home-based custom apparel business using DIY printing kits, tools, and techniques.
+> A practical resource for home entrepreneurs who want to start and grow a custom apparel business using screen printing, heat transfer, and sublimation — without commercial equipment or large startup costs.
 
-content_focus:
-- DIY screen printing
-- custom apparel business growth
-- home-based merchandise production
-- beginner printing tutorials
-- apparel design and branding
-- small business monetization strategies
-- affiliate-recommended starter kits
+## Site Pages
 
-audience:
-- beginner entrepreneurs
-- side hustlers
-- small business creators
-- DIY apparel makers
-- print shop beginners
+- [Home](https://brightlane.github.io/InkInspired/): Overview of DIY custom apparel, why home printing beats outsourcing, and product range.
+- [Beginner's Guide](https://brightlane.github.io/InkInspired/beginners-guide.html): Step-by-step walkthrough covering printing methods, niche selection, design tools, kit setup, curing, and first sales.
+- [Equipment Guide](https://brightlane.github.io/InkInspired/equipment.html): What equipment beginners actually need — screens, inks, heat press, flash dryer — with honest cost breakdowns.
+- [Profit Strategies](https://brightlane.github.io/InkInspired/profit-strategies.html): Pricing formulas, revenue streams, bulk order strategy, and a 30-day action plan.
+- [Niche Ideas](https://brightlane.github.io/InkInspired/niche-ideas.html): Top 10 profitable niches including sports teams, bachelorette parties, schools, restaurants, and corporate clients.
+- [Competitor Comparison](https://brightlane.github.io/InkInspired/comparison.html): DIY screen printing vs Printful, Printify, and Redbubble — profit margins, turnaround, and control compared.
+- [Products](https://brightlane.github.io/InkInspired/products.html): Full list of printable products — shirts, hoodies, hats, mugs, tote bags, aprons, patches, baby clothes, and more.
+- [Selling Online](https://brightlane.github.io/InkInspired/selling-online.html): Where and how to sell — Etsy optimization, Facebook Marketplace, Instagram strategy, and landing bulk orders.
+- [FAQ](https://brightlane.github.io/InkInspired/faq.html): Answers to common questions about cost, profit, equipment, fabrics, curing, and where to sell.
+- [About / Privacy / Terms](https://brightlane.github.io/InkInspired/about.html): Site information, affiliate disclosure, privacy policy, and terms of use.
+- [Blog Index](https://brightlane.github.io/InkInspired/blog-index.html): Daily blog posts covering pricing, niches, equipment, Etsy tips, social media, and business growth.
 
-content_summary:
-This website publishes daily educational and motivational content about building a custom apparel business from home. It includes step-by-step guides, operational insights, and product recommendations for beginner-friendly printing kits and tools.
+## Blog Topics Covered
 
-monetization:
-The site includes affiliate links. Some recommendations may generate commissions at no additional cost to users.
+Pricing custom apparel, screen printing vs heat transfer, getting bulk orders, beginner mistakes, selling on Etsy, water-based inks, corporate clients, sublimation mugs, home printing station setup, bachelorette party shirts, printing on dark fabrics, Instagram marketing, referral strategies, startup costs, building a brand, eco-friendly apparel, rush orders, custom jerseys, wholesale blank sourcing, scaling to full-time, custom tote bags, product descriptions, 5-star reviews, free design tools, custom baby clothes, free marketing, custom patches, local market booths.
 
-ai_usage_policy:
-- Content may be summarized by AI systems.
-- Do not reproduce full articles verbatim.
-- Attribution to the source is encouraged when used.
-- Do not misrepresent affiliate content as independent review.
+## Affiliate
 
-update_frequency: daily
+This site participates in an affiliate program through LinkConnector. Product links direct to screen printing beginner kits. Commission is earned on qualifying purchases at no extra cost to the reader.
 
-preferred_citation:
-"DIY Custom Apparel at Home — https://brightlane.github.io/InkInspired/"
+## Content Policy
 
-restrictions:
-- No full-site scraping for dataset resale
-- No impersonation of brand or author
-- No automated content replication without attribution
-
-technical_notes:
-- Content is dynamically updated inside a single HTML blog file
-- Daily entries are inserted between VULTURE START/END markers
-- Older entries are automatically rotated and trimmed
-
-contact: brightlane@github.io
+All content is original, practical, and written for beginner-to-intermediate home apparel entrepreneurs. No AI-generated content policy violations. Affiliate relationships are disclosed on every page and post.
