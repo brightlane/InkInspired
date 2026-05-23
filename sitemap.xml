@@ -1,36 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
   <url>
-    <loc>https://brightlane.github.io/InkInspired/</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://yourdomain.com/index.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Blog (same page, dynamic updates) -->
   <url>
-    <loc>https://brightlane.github.io/InkInspired/blog.html</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Supporting static assets -->
-  <url>
-    <loc>https://brightlane.github.io/InkInspired/affiliate.json</loc>
-    <lastmod>2026-04-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://brightlane.github.io/InkInspired/robots.txt</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://yourdomain.com/beginners-guide.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://yourdomain.com/equipment.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/profit-strategies.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/niche-ideas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/comparison.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/products.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/selling-online.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
